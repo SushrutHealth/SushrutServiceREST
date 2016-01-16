@@ -1,0 +1,11 @@
+%li.video.thumb.entity
+  .image
+    = link_to video_path(video), :class => "thumbnail" do
+      = image_tag(video.thumbnail_small, :alt => video.title)
+      %span.duration= duration(video)
+  .meta
+    = source_links(video)
+    %h3= link_to video.title, video_path(video)
+    .counts
+      %span.mentions-count= "Mentioned #{pluralize(video.mentions.count, 'time')}"
+  .loading

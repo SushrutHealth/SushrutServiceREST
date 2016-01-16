@@ -1,0 +1,21 @@
+.btn-group.session
+  = link_to truncate(current_user.name, :length => 28, :omission => ''), user_path(current_user), :class => "btn current-user" if current_user
+  = link_to "Connect an Account", "#", :class => "btn" unless current_user
+  %a.btn.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+    %span.caret
+  %ul.dropdown-menu.session
+    - if current_user
+      .avatar= user_avatar(current_user)
+      .authentications
+        %strong Connections
+        .twitter= connection_status("twitter", current_user)
+        .facebook= connection_status("facebook", current_user)
+      %li.divider
+      %li.action= link_to "My Profile", user_path(current_user)
+      %li.action= link_to "Account Settings", "#"
+      %li.action= link_to "Help Center", "#"
+      %li.divider
+      %li.action.logout= link_to "Log Out", logout_path, :'data-skip-pjax' => true
+    - else
+      %li.action.login= link_to "Log In with Twitter", "/auth/twitter", :class => "button twitter login", :'data-skip-pjax' => true
+      %li.action.login= link_to "Log In with Facebook", "/auth/facebook", :class => "button facebook login", :'data-skip-pjax' => true

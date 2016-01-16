@@ -1,0 +1,172 @@
+body > .popover {
+
+  h3.title {
+    display: none;
+  }
+
+  div.content {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+}
+
+.session {
+
+  &.btn-group {
+
+    .avatar {
+      margin: 6px 13px 0;
+    }
+
+    .authentications {
+      width: auto;
+      line-height: 16px;
+      font-size: 12px;
+      margin: 6px 0 13px;
+
+      strong {
+        padding-bottom: 5px;
+        display: block;
+      }
+    }
+
+    .dropdown-menu {
+      
+      li.divider {
+        border-top: 1px solid white;
+      }
+
+      li.action {
+
+        a {
+          font-size: 12px; 
+          font-weight: bold;
+          padding: 3px 14px;
+        }
+        
+        &.logout {
+          display: block;
+        
+          a {
+            font-weight: normal;
+          }
+        }
+
+        &.login {
+	  
+          a {
+            padding: 0;
+            margin: 7px auto;
+          }
+        }
+      }
+    }
+  }
+
+  .button.login {
+    display: block;
+    width: 150px;
+    height: 23px;
+    text-indent: -9999em;
+    text-align: left;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: 0 0;
+    margin: 0 0 8px;
+    padding: 0;
+
+    &:hover {
+      background-position: 0 -24px;
+    }
+
+    &:active {
+      background-position: 0 -48px;
+    }
+
+    &.facebook {
+      background-image: image_url('/assets/buttons/login_facebook.png');
+    }
+
+    &.twitter {
+      background-image: image_url('/assets/buttons/login_twitter.png');
+    }
+  }
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 1px 8px 0 0;
+    padding: 0;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    border: 1px solid white;
+    overflow: hidden;
+    
+    a {
+      padding: 0;
+      clear: none;
+    }
+
+    &:hover {
+      border: 1px solid #0069D6;
+
+      a {
+        border: 1px solid white;
+        position: relative;
+        width: 48px;
+        overflow: hidden;
+        height: 48px;
+
+        img {
+          position: relative;
+          top: -1px;
+          left: -1px;
+        }
+      }
+    }
+    
+    a {
+      display: block;
+
+      img {
+        max-width: none;
+      }
+    }
+  }
+
+  .current-user {
+    font-weight: bold;
+    
+    a {
+      padding: 0;
+      clear: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .btn {
+
+    &.current-user {
+      font-weight: normal;
+    }
+  }
+
+  .authentications {
+    width: 140px;
+    padding-top: 1px;
+
+    span {
+      padding-left: 5px;
+    }
+  }
+
+  .logout {
+    display: none;
+  }
+}

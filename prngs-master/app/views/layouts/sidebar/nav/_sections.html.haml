@@ -1,0 +1,19 @@
+%nav.sections.module
+  %h5 Sources
+  %ul
+    - @suggested.sources.each do |source|
+      %li
+        %span.label= source.videos.count
+        = link_to source.name, source_path(source)
+  %h5 Artists
+  %ul
+    - @suggested.artists.each do |artist|
+      %li
+        %span.label= artist.videos.count
+        = link_to artist.name, artist_path(artist)
+  %h5 Users
+  %ul.last-child
+    - @suggested.users.each do |user|
+      %li
+        %span.label= user.videos.count
+        = link_to user.name, user_path(user)

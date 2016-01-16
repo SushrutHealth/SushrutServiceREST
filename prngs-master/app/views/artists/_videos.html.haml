@@ -1,0 +1,4 @@
+%ul.media-list.artist
+  = render :collection => @videos, :as => :video, :partial => "videos/thumb"
+
+  = paginate @videos, :id => "pagination"

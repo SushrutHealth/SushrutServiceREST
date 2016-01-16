@@ -1,0 +1,18 @@
+= content_for_or_pjax :heading do
+  = search_counts(@query, @results)
+
+%ul.media-list.search
+
+  - if @results[:videos].first
+    .module
+      %h3 Videos
+      = render :collection => @results[:videos], :as => :video, :partial => "videos/thumb"
+  - if @results[:artists].first
+    .module
+      %h3 Artists
+      = render :collection => @results[:artists], :as => :artist, :partial => "artists/thumb"
+  - if @results[:sources].first
+    .module
+      %h3 Sources
+      = render :collection => @results[:sources], :as => :source, :partial => "sources/thumb"
+

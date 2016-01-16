@@ -1,0 +1,21 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml", :"xmlns:og" => "http://ogp.me/ns#", :"xmlns:fb" => "http://www.facebook.com/2008/fbml"}
+  %head
+    %title= APP_NAME
+    %meta{:content => "chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    = render "shared/open_graph"
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body{:class => @body_class}
+    = render "shared/facebook_js_sdk"
+    .container
+      = flash_messages
+      .content
+        = render "layouts/header"
+        .row.body
+          = render "layouts/sidebar"
+          = render "layouts/main"
+          #loader_mask
+      = render "layouts/footer"
+    = render "shared/loaders"

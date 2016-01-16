@@ -1,0 +1,12 @@
+- if current_user
+  .session.module.logged-in
+    .avatar= user_avatar(current_user)
+    .current-user= link_to current_user.name, user_path(current_user)
+    .authentications
+      .twitter= connection_status("twitter", current_user)
+      .facebook= connection_status("facebook", current_user)
+    = link_to "Log Out", logout_path, :class => "logout", :'data-skip-pjax' => true
+- else
+  .session.module.logged-out
+    = link_to "Log In with Twitter", "/auth/twitter", :class => "button twitter login", :'data-skip-pjax' => true
+    = link_to "Log In with Facebook", "/auth/facebook", :class => "button facebook login", :'data-skip-pjax' => true

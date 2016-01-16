@@ -1,0 +1,11 @@
+%li.active.dropdown{:'data-dropdown' => 'dropdown'}
+  = link_to "Videos", "#", :class => "dropdown-toggle"
+  %ul.dropdown-menu
+    %li.heading
+      %span Popular
+    %li.divider
+    %li= link_to "Today", "#", :class => "popular-today"
+    %li= link_to "This Week", "#", :class => "popular-this-week"
+    %li= link_to "This Month", "#", :class => "popular-this-month"
+    %li= link_to "This Year", "#", :class => "popular-this-year"
+    %li= link_to "All Time", "#", :class => "popular-all-time"

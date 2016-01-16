@@ -1,0 +1,7 @@
+= og_title(@og.try(:title) || APP_NAME)
+= og_type(@og.try(:type) || "website")
+= og_url(@og.try(:url) || APP_URL)
+= og_image(@og.try(:image) || APP_IMAGE)
+= og_site_name(APP_NAME)
+= og_description(@og.try(:description) || APP_DESCRIPTION)
+= og_fb_app_id(FB_APP_ID)

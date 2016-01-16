@@ -1,0 +1,22 @@
+body.home {
+
+  > .container {
+
+    > .content {
+
+      .main {
+
+        .page-heading {
+          float: none;
+        }
+      }
+    }
+  }
+
+  .featured-videos {
+
+    .video.player {
+      margin-bottom: 20px;
+    }
+  }
+}

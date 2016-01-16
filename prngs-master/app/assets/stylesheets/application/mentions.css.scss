@@ -1,0 +1,59 @@
+ul.media-list.mentions {
+  padding-left: 8px;
+
+  li.mention {
+    float: right;
+    clear: both;
+    width: 188px;
+    border: 1px solid #DDD;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.75);
+    margin: 0 0 15px 0;
+    z-index: 0;
+    position: relative;
+  
+    > .thumbnail {
+      padding-top: 12px;
+  
+      h5 {
+        font-size: 13px;
+        line-height: 16px;
+        padding: 0 0 6px 0;
+      } 
+      
+      a.thumbnail {
+        float: none;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .caption {
+        padding: 9px 0 0;
+        margin: 0 auto;
+        width: 160px;
+        line-height: 16px;
+        color: gray;
+
+        > .content {
+          font-size: 12px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+
+      p.buttons {
+        margin: 6px auto 4px;
+        text-align: center;
+        padding: 5px 17px 5px 14px;
+
+        a.btn.primary {
+          width: 100%;
+          padding: 5px 0 6px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
