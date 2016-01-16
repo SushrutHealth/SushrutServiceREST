@@ -1,0 +1,4 @@
+= content_for_or_pjax :heading do
+  %h1 Videos
+
+  = render :collection => @videos, :as => :video, :partial => "videos/thumb"

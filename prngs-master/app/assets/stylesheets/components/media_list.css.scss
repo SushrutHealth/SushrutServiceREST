@@ -1,0 +1,249 @@
+.thumbnails {
+  margin-left: -20px;
+  margin-bottom: 0;
+  list-style: none;
+  zoom: 1;
+
+  &:before, &:after {
+    display: table;
+    *display: inline;
+    content: "";
+    zoom: 1;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  > li {
+    float: left;
+    margin: 0 0 20px 20px;
+  }
+
+  .caption {
+    padding: 9px;
+  }
+}
+
+a.thumbnail:hover {
+  border-color: #0088cc;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+  -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+  box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+}
+
+.thumbnail {
+  padding: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: 0 none;
+}
+
+
+ul.media-list {
+  margin: 0 0 18px 0;
+  list-style: none;
+
+  &.popular.today {
+    width: 518px;
+    float: left;
+
+    li {
+      line-height: 1;
+    }
+  }
+
+  &.search {
+    width: 518px;
+    float: left;
+
+    li {
+      line-height: 1;
+    }
+  }
+
+  &.mentions {
+    float: right;
+
+    .image {
+      float: none;
+      margin: 0 auto;
+    }
+  }
+
+  &.source {
+    clear: left;
+  }
+
+  &.artist {
+    clear: left;
+  }
+
+  li {
+    overflow: hidden;
+    padding-bottom: 6px;
+    position: relative;
+
+    &.artist {
+      padding-bottom: 10px;
+
+      .meta {
+        width: 358px;
+        max-width: none;
+
+        h3 {
+          font-size: 20px;
+          line-height: 20px;
+          padding: 0 0 10px;
+        }
+
+        .bio {
+          line-height: 16px;
+        }
+      }
+    }
+
+    .loading {
+      position: absolute;
+      top: 35px;
+      left: 70px;
+      z-index: 50;
+    }
+    
+    .image {
+      float: left;
+      position: relative;
+      overflow: hidden;
+      width: 168px;
+      height: 95px;
+
+      &.largesquare {
+        width: 137px;
+        height: 137px;
+        
+        a.thumbnail {
+          width: 132px;
+          height: 132px;
+
+          img {
+            width: 126px;
+            height: 126px;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+
+      &:hover, &:active {
+
+        a.thumbnail {
+          border: 3px solid #0069D6;
+          -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.8);
+          -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.8);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.8);
+  
+          img {
+            z-index: -1;
+          }
+
+          .duration {
+            z-index: -1;
+          }
+        }        
+      }
+
+      a.thumbnail {
+        display: block;
+        float: left;
+        overflow: hidden;
+        border: none;
+        width: 166px;
+        height: 92px;
+        position: relative;
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+        border: 3px solid rgba(255, 255, 255, 0.8);
+        box-sizing: border-box;
+       *behavior: url(/assets/polyfills/boxsizing.htc);
+
+        img {
+          width: 163px;
+          max-width: none;
+          height: 122px;
+          position: absolute;
+          top: -16px;
+          left: -3px;
+          padding: 0;
+          border: 0 none;
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          border-radius: 0;
+          -webkit-box-shadow: 0;
+          -moz-box-shadow: 0;
+          box-shadow: 0;
+        }
+
+        .duration {
+          background: rgba(0, 0, 0, 0.6);
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          -webkit-border-top-left-radius: 5px;
+          padding: 1px 3px 2px 4px;
+          color: white;
+          font-weight: bold;
+          font-size: 10px;
+          line-height: 12px;
+        }
+      }    
+    }
+
+    .meta {
+      float: left;
+      max-width: 327px;
+      height: 96px;
+      padding: 2px 11px;
+      position: relative;
+
+      h3 {
+        clear: both;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 5px 0;
+
+        a {
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      p {
+        padding: 2px 0;
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      .source {
+        display: block;
+        float: left;
+        margin-right: 4px;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: none;
+
+          span {
+            background-color: #00438A;
+          }
+        }
+      }
+    }
+  }
+}

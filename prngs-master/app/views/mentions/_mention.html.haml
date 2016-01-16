@@ -1,0 +1,12 @@
+%li.span3.mention
+  .thumbnail
+    .image
+      = link_to video_path(mention.video), :class => "thumbnail" do
+        = image_tag(mention.video.andand.thumbnail_small, :alt => mention.video.andand.title)
+        %span.duration= duration(mention.video)
+    .caption
+      %h5= Sanitize.clean(mention.title).html_safe
+      - unless mention.source.kind == "Twitter"
+        .content{:'data-ellipsis' => true}= clean_content(mention.text)
+    %p.buttons
+      = link_to "Watch Video", video_path(mention.video), :class => "btn primary"

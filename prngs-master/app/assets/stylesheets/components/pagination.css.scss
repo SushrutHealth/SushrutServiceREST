@@ -1,0 +1,35 @@
+.pagination {
+
+  ul {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .next_page {
+    
+    a {
+      border: 0;
+    }
+  }
+  
+  .prev {
+    
+    a {
+      -webkit-border-radius: 3px 0 0 3px;
+      -moz-border-radius: 3px 0 0 3px;
+      border-radius: 3px 0 0 3px;
+    }
+  } 
+  
+  .next_page {
+    
+    a {
+      -webkit-border-radius: 0 3px 3px 0;
+      -moz-border-radius: 0 3px 3px 0;
+      border-radius: 0 3px 3px 0;
+    }
+  }
+}
+
+.page-entries-info {
+  padding-left: 2px;
+}

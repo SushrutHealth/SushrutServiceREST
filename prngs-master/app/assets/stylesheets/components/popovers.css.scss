@@ -1,0 +1,14 @@
+.popover {
+
+  .inner {
+    width: auto;
+
+    .popover-content {
+      display: block;
+    }
+  }
+}
+
+.popover-content {
+  display: none;
+}

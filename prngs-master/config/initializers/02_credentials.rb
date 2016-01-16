@@ -1,0 +1,13 @@
+# facebook
+FB_APP_ID = '302513326459743'
+FB_SECRET = 'aa03c934b90843a64e780bf6c232fcdd'
+
+# twitter
+TWITTER_KEY = 'BuUrxGhr13lkhbazPz9qA'
+TWITTER_SECRET = 'CaLqbAAWtExTCar38DAaR04vo2e6O5fltxcw7ai8lE'
+TWITTER_TOKEN = '125257365-W2jzEkhE2nYPxyyCwyWWUCrEGKztGT1s3V6GIMYe'
+TWITTER_TOKEN_SECRET = 'DApWytGmAmDU4CbCB0XazcNLMRAkOo6YVrJedGJKF98'
+
+# last.fm
+LastFM.api_key = '13da12b58ceeea0fcabee5221bdd4e06'
+LastFM.client_name = APP_NAME

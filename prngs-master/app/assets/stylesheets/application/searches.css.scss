@@ -1,0 +1,33 @@
+body.searches {
+
+  .page-heading {
+    margin: 0;
+    width: 517px;
+    overflow: hidden;
+
+    .counts {
+      float: left;
+      font-size: 14px;
+
+      .count {
+        @include inline-block;
+      }
+    }
+  }
+
+  .main {
+
+    .page-heading {
+      @include twopxborder;
+    }
+
+    .module {
+      @include twopxborder;
+      margin-bottom: 10px;
+
+      h3 {
+        padding-bottom: 8px;
+      }
+    }
+  }
+}
